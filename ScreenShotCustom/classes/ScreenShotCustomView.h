@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ScreenShotCustomView : UIView
 +(instancetype)createCustomScreenShot:(UIImage *)image rect:(CGRect)rect customView:(UIView *)customView handlerView:(UIView *)handlerView;
+
+-(UIImage *)generateCustomScreenShotImage;
+
+-(void)remove;
 @end
 
 NS_ASSUME_NONNULL_END

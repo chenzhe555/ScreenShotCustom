@@ -41,7 +41,7 @@
 
 -(void)test
 {
-    [[ScreenShotManager shareManager] screenShotCurrentWindowWithRect:CGRectMake(100, 100, [UIScreen mainScreen].bounds.size.width - 100, 200)];
+//    [[ScreenShotManager shareManager] screenShotCurrentWindowWithRect:CGRectMake(100, 100, [UIScreen mainScreen].bounds.size.width - 100, 200)];
 }
 
 

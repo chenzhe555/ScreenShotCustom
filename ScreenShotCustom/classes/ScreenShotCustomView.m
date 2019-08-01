@@ -29,6 +29,10 @@
     view.backgroundColor = [UIColor whiteColor];
     [window addSubview:view];
     
+    [view createScreenShotView:image rect:rect];
+    [view createCustomView:customView];
+    [view createHandlerView:handlerView];
+    
     return view;
 }
 
@@ -52,5 +56,16 @@
     self.handlerView = handlerView;
     self.handlerView.frame = CGRectMake(([UIScreen mainScreen].bounds.size.width - self.handlerView.frame.size.width)/2, self.customView.frame.origin.y + self.customView.frame.size.height, self.handlerView.frame.size.width, self.handlerView.frame.size.height);
     [self addSubview:self.handlerView];
+}
+
+-(UIImage *)generateCustomScreenShotImage
+{
+    return [ScreenShotUtil screenShotWithRect:CGRectMake(0, 0, self.bounds.size.width, self.customView.frame.origin.y + self.customView.frame.size.height)];
+}
+
+-(void)remove
+{
+    [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    [self removeFromSuperview];
 }
 @end
