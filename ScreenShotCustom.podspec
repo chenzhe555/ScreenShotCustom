@@ -7,6 +7,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "陈哲" => "376811578@qq.com" }
   s.source       = { :git => "https://github.com/chenzhe555/ScreenShotCustom.git", :tag => "#{s.version}" }
+  s.source_files = 'ScreenShotCustom/ScreenShotManager.{h,m}'
   s.subspec 'classes' do |one|
       one.source_files = 'ScreenShotCustom/classes/*.{h,m}'
   end
